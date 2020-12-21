@@ -18,7 +18,7 @@ public class MainController
     @GetMapping("/main")
     public String main(Model model)
     {
-       model.addAttribute("mes",messageRepo.findAll());
+       model.addAttribute("mes",messageRepo.findMessageByApprovedIsTrue());
         return "main";
     }
     @GetMapping("/visitorPostList")
